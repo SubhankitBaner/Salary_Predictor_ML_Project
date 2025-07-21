@@ -91,7 +91,7 @@ st.divider()
 age = st.number_input("Age", min_value=18, max_value=65, step=1)
 experience = st.number_input("Years of Experience", min_value=0, max_value=50, step=1)
 
-gender = st.selectbox("Gender", ["Male", "Female", "Other"])
+gender = st.selectbox("Gender", ["Male", "Female"])
 education = st.selectbox("Education Level", [
     "Bachelor's",
     "Master's",
@@ -161,7 +161,7 @@ if st.button("Predict Salary"):
         prediction = model.predict(input_df)[0]
         formatted_price = format_currency(prediction, 'INR', locale='en_IN')
 
-        # Salary Result Box (as you had it)
+        # Salary Result Box 
         st.markdown(
             f"""
             <div style='
@@ -178,7 +178,7 @@ if st.button("Predict Salary"):
             unsafe_allow_html=True
         )
 
-        # Disclaimer Box (as you had it)
+        # Disclaimer Box 
         st.markdown(
             """
             <style>
